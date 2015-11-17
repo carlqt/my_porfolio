@@ -10,11 +10,13 @@ module Portfolio
       puts GREETINGS
 
       print <<-eos
+
     1.) Experience
     2.) Skills
     3.) Availability
     4.) Contact
     5.) Exit
+
       eos
 
       print "Choose number: "
@@ -25,6 +27,9 @@ module Portfolio
       when 1
         system 'clear'
         Experience.show
+      when 2
+        system 'clear'
+        Skills.show
       end
 
       break if option == '5'
