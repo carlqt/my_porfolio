@@ -1,10 +1,12 @@
 require "portfolio/version"
+require "portfolio/experience"
 
 module Portfolio
-  GREETINGS = "Hello, my name is Carl William Tablante. What do you want to lear about me?"
+  GREETINGS = "Hello, my name is Carl William Tablante. What do you want to learn about me?"
 
   def start
     loop do
+      system 'clear'
       puts GREETINGS
 
       print <<-eos
@@ -18,13 +20,11 @@ module Portfolio
       print "Choose number: "
 
       option = gets.chomp
+
       case option.to_i
       when 1
-        exp = Experience.new
-        exp.summary
-      when 2
-      when 3
-      when 4
+        system 'clear'
+        Experience.show
       end
 
       break if option == '5'

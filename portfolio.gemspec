@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Carl Tablante"]
   spec.email         = ["carlwilliam.tablante@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{My portfolio}
+  spec.description   = %q{Since I suck at designing a web page, here's a terminal portfolio}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -22,9 +22,9 @@ Gem::Specification.new do |spec|
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
 
-  spec.files         = %w(lib/portfolio.rb lib/portfolio/version.rb)
+  spec.files         = Dir.glob("lib/**/*") #%w(lib/portfolio.rb lib/portfolio/version.rb, lib)
   spec.bindir        = "exe"
-  spec.executables   = ["porfolio"]
+  spec.executables   = ["portfolio"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.10"
