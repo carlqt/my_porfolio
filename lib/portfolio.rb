@@ -1,5 +1,6 @@
 require "portfolio/version"
 require "portfolio/experience"
+require "portfolio/objective"
 
 module Portfolio
   GREETINGS = "Hello, my name is Carl William Tablante. What do you want to learn about me?"
@@ -11,9 +12,9 @@ module Portfolio
 
       print <<-eos
 
-    1.) Experience
-    2.) Skills
-    3.) Availability
+    1.) Objectives
+    2.) Experience
+    3.) Skills
     4.) Contact
     5.) Exit
 
@@ -23,12 +24,13 @@ module Portfolio
 
       option = gets.chomp
 
+      system 'clear'
       case option.to_i
       when 1
-        system 'clear'
-        Experience.show
+        Objective.show
       when 2
-        system 'clear'
+        Experience.show
+      when 3
         Skills.show
       end
 
